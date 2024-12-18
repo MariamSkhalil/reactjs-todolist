@@ -12,8 +12,9 @@ function persistData(newList){
 }
 
 function handleAddTodos(newItem){
-  setTodo([...todos,newItem])  //adding new items to the todo list
-  persistData([...todos,newItem])
+  if(newItem){
+    setTodo([...todos,newItem])  //adding new items to the todo list
+    persistData([...todos,newItem])}
 }
 function handleEditTodos(index){
   const editedValue= todos[index]
